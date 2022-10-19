@@ -2,18 +2,24 @@
 #include <stack>
 using namespace std;
 
-int getMiddle(stack<int> &s, int totalSize)
+int getMiddle(stack<int> &s, int &totalSize)
 {
-    cout << s.size() << " ";
-
+    // cout << s.size() << " ";
     if ((totalSize / 2) + 1 == s.size())
     {
+
+        // cout << s.top() << endl;
+        // return;
+
         return s.top();
     }
     int top = s.top();
     s.pop();
-    getMiddle(s, totalSize);
+
+    int ans = getMiddle(s, totalSize);
     s.push(top);
+
+    return ans;
 }
 
 int main()
@@ -26,7 +32,12 @@ int main()
     s.push(5);
     s.push(50);
     int n = s.size();
-    cout << getMiddle(s, n);
+    cout << endl
+         << "Middle = " << getMiddle(s, n);
+    // getMiddle(s, n);
+
+    cout << endl
+         << s.size() << endl;
 
     return 0;
 }

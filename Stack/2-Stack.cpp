@@ -26,7 +26,8 @@ public:
     {
         if (top == -1)
             cout << "stack is already empty" << endl;
-        top--;
+        else
+            top--;
     }
 
     int getTop()

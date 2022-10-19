@@ -11,19 +11,18 @@ int main()
     int count = 0;
     for (int i = 0; i < cooks; i++)
     {
-    int k = 1;
-    int t = time;
+        int k = 1;
+        int t = time;
 
-    while (t > 0)
-    {
-        t = t - ranks[i] * k;
-        if (t >= 0)
+        while (t > 0)
         {
-            count++;
-            k++;
+            t = t - ranks[i] * k;
+            if (t >= 0)
+            {
+                count++;
+                k++;
+            }
         }
-    }
-
     }
 
     cout << "No of prathas prepared: " << count;
