@@ -1,3 +1,5 @@
+//* overloading '+' to add given number to class members
+
 #include <iostream>
 using namespace std;
 
@@ -11,8 +13,7 @@ public:
     }
 
     // Operator overloading
-    // '+' when used with any object of the class it adds n to both class members 'r' and 'i'
-    // but we have to write a+5 (and not 5+a)
+    // '+' when used with any object of the class complex it adds n to both class members 'r' and 'i'
     void operator+(int n)
     {
         r = r + n;
@@ -28,8 +29,9 @@ public:
 int main()
 {
     complex a(2, 3), b(4, 9);
-    // 5+a;
-    // This doesn't work because in case of binary operator first operand is non-immutable(it has to be type current object)
+    //! 5+a;
+    //! This doesn't work because in case of binary operator 
+    //! first operand is non-immutable (it has to be type current object)
     a + 5;
     b + 10;
     a.print();

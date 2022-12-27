@@ -1,4 +1,5 @@
-// multiple constructors, copy constructor
+// *constructor overloading and copy constructor
+
 #include <iostream>
 using namespace std;
 

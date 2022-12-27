@@ -8,7 +8,7 @@ int main()
     q.push(4);
     q.push(9);
     q.push(7);
-    for (int i = 0;q.size()!=0; i++)
+    for (int i = 0; q.size() != 0; i++)
     {
         cout << q.front() << endl;
         q.pop();

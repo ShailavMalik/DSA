@@ -3,7 +3,6 @@ using namespace std;
 
 class person
 {
-    string name;
     int age;
 
 public:
@@ -20,13 +19,18 @@ public:
     {
         cout << "Age = " << age << endl;
     }
+    void operator++(int)
+    {
+        cout << "Age = " << age << endl;
+    }
 };
 
 int main()
 {
     person p;
-    int s;
+
     ++p;
+    p++;
 
     return 0;
 }

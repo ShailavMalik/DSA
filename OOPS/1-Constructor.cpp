@@ -1,3 +1,5 @@
+// *program to illustrate use of constructor
+
 #include <iostream>
 using namespace std;
 

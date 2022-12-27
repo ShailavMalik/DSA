@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.ino": "arduino-output",
+        "*.html": "html",
+        "ostream": "cpp",
+        "iostream": "cpp"
+    }
+}

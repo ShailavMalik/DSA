@@ -54,7 +54,6 @@ void mergeSort(int arr[], int s, int e)
         return;
     int mid = (s + e) / 2;
     mergeSort(arr, s, mid);
-
     mergeSort(arr, mid + 1, e);
 
     merge(arr, s, e);
