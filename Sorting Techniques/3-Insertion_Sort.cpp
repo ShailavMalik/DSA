@@ -10,6 +10,7 @@ void insertionSort(int arr[], int n)
         int j = i - 1; 
         for (; j >= 0; j--)
         {
+            // move smaller element backward
             if (arr[j] > temp)
                 arr[j + 1] = arr[j]; 
             else
@@ -21,7 +22,7 @@ void insertionSort(int arr[], int n)
  
 int main()
 {
-    int arr[] = {2, 9, 7, 4};
+    int arr[] = {2, 9, 7, 4,-5};
     int n = sizeof(arr) / sizeof(arr[0]);
     insertionSort(arr, n);
     // Printing array

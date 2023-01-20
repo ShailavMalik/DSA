@@ -3,6 +3,7 @@ using namespace std;
 
 void merge(int arr[], int s, int e)
 {
+    // copy left and right part to new arrays
     int mid = (s + e) / 2;
 
     int leftLength = mid - s + 1;
@@ -12,45 +13,44 @@ void merge(int arr[], int s, int e)
     int *right = new int[rightLength];
 
     // copy left part
-    int originalIndex = s;
+    int index = s;
     for (int i = 0; i < leftLength; i++)
     {
-        left[i] = arr[originalIndex++];
+        left[i] = arr[index++];
     }
 
     // copy right part
-    originalIndex = mid + 1;
     for (int i = 0; i < rightLength; i++)
     {
-        right[i] = arr[originalIndex++];
+        right[i] = arr[index++];
     }
 
-    // now merge these two sorted arrays
+    // merge these two sorted array into original array
     int index1 = 0;
     int index2 = 0;
-    originalIndex = s;
+    index = s;
     while (index1 < leftLength && index2 < rightLength)
     {
         if (left[index1] <= right[index2])
-            arr[originalIndex++] = left[index1++];
+            arr[index++] = left[index1++];
         else
-            arr[originalIndex++] = right[index2++];
+            arr[index++] = right[index2++];
     }
 
     while (index1 < leftLength)
     {
-        arr[originalIndex++] = left[index1++];
+        arr[index++] = left[index1++];
     }
 
     while (index2 < rightLength)
     {
-        arr[originalIndex++] = right[index2++];
+        arr[index++] = right[index2++];
     }
 }
 
 void mergeSort(int arr[], int s, int e)
 {
-    if (s >= e)
+    if (s == e)
         return;
     int mid = (s + e) / 2;
     mergeSort(arr, s, mid);

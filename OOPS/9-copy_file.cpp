@@ -1,25 +1,21 @@
 #include <iostream>
 #include <fstream>
-#include <string>
-
-
 using namespace std;
  
 int main() 
 {
-    char ch;
-ifstream infile("new.txt");
-ofstream outfile("text.txt");
+    ifstream infile("new.txt");
+    ofstream outfile("file.txt");
 
-while(infile)
-{
-    infile.get(ch);
-    outfile.put(ch);
-}
+    while(!infile.eof())
+    {
+        char ch;
+        infile.get(ch);
+        outfile.put(ch);
+    }
 
-infile.close();
+    // iostream obj();
 
-    
  
     return 0; 
 }
